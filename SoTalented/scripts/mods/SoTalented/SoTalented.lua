@@ -1,13 +1,5 @@
 local mod = get_mod("SoTalented")
 
--- Everything here is optional, feel free to remove anything you're not using
-
---[[
-	Functions
---]]
-
--- "Private" function - not accessible to other mods
-
 local function force_update_talent_ids()
 	TalentIDLookup = {}
 	for _, hero_talents in pairs(Talents) do
@@ -460,9 +452,7 @@ local function add_allrow_talents()
 	force_update_talent_ids()
 end
 
-local real_scav_proc_func = nil
 local function remove_allrow_talents()
-	--ProcFunctions["bardin_ranger_scavenge_proc"] = real_scav_proc_func
 	table.remove(TalentTrees.dwarf_ranger[1][5])
 	table.remove(TalentTrees.dwarf_ranger[2][5])
 	table.remove(TalentTrees.dwarf_ranger[3][5])
@@ -530,27 +520,13 @@ mod:hook(TalentExtension, "_get_talent_ids", function (func, self)
 	return talent_ids
 end)
 
-local scanned_tals = {
-	"victor_bountyhunter_activated_ability_shotgun",
-	"victor_bountyhunter_activated_ability_railgun"
-}
-
-local function is_scanned_talent(name)
-    for i, n in ipairs(scanned_tals) do
-        if name == n then
-            return true
-        end
-    end
-    return false
-end
-
--- Some talent functionality comes from a has_talent check
--- Unless it's a talent that I want to scan for, just return true
+-- Some talent functionality comes from a has_talent check;
+-- unless it's a talent that I want to scan for, just return true.
 -- We have all the talents!
 mod:hook(TalentExtension, "has_talent", function (func, self, talent_name)
-	local has = func(self, talent_name)
-	if  talent_name == "victor_bountyhunter_activated_ability_shotgun" or
-		talent_name == "victor_bountyhunter_activated_ability_railgun" then
+	local has = func(self, talent_name) -- Run it, just in case other mods are hooked to it
+	if talent_name == "victor_bountyhunter_activated_ability_shotgun" or
+	   talent_name == "victor_bountyhunter_activated_ability_railgun" then
 		return has
 	else
 		return true
@@ -642,6 +618,7 @@ mod:hook_origin(BuffExtension, "trigger_procs", function (self, event, ...)
 			local buff_func = buff.buff_func
 			-- if buff == TalentBuffTemplates.dwarf_ranger.bardin_ranger_passive.buffs[1] then -- doesn't work
 			-- if buff_func == ProcFunctions.bardin_ranger_scavenge_proc then -- doesn't work
+			-- Couldn't find a better check, resorted to a hack :(
 			if event == "on_special_killed" then -- This works... but only because this is the only buff for that event
 				buff_func = sotalented_scavenge_proc_func
 			end
@@ -668,7 +645,6 @@ mod:hook_origin(BuffFunctionTemplates.functions, "update_kerillian_waywatcher_re
 	local next_heal_tick = buff.next_heal_tick or 0
 
 	if next_heal_tick < t and Unit.alive(unit) then
-		--local talent_extension = ScriptUnit.extension(unit, "talent_system")
 		local allied_ammo_regen = mod:get("ker_ally_ammo_regen")
 		local weapon_slot = "slot_ranged"
 		local ammo_bonus_fraction = mod:get("ker_ammo_amt")
@@ -737,20 +713,10 @@ mod:hook_origin(BuffFunctionTemplates.functions, "update_kerillian_waywatcher_re
 		buff.next_heal_tick = t + buff_template.time_between_heals
 	end
 end)
---]]
 
 --[[
 	Callbacks
 --]]
-
--- All callbacks are called even when the mod is disabled
--- Use mod:is_enabled() to check that the mod is enabled
-
--- Called on every update to mods
--- dt - time in milliseconds since last update
-mod.update = function(dt)
-	
-end
 
 -- Called when all mods are being unloaded
 -- exit_game - if true, game will close after unloading
@@ -760,23 +726,12 @@ mod.on_unload = function(exit_game)
 	end
 end
 
--- Called when game state changes (e.g. StateLoading -> StateIngame)
--- status - "enter" or "exit"
--- state  - "StateLoading", "StateIngame" etc.
-mod.on_game_state_changed = function(status, state)
-	
-end
-
--- Called when a setting is changed in mod settings
--- Use mod:get(setting_name) to get the changed value
-mod.on_setting_changed = function(setting_name)
-	
-end
-
 -- Called when the checkbox for this mod is unchecked
 -- is_first_call - true if called right after mod initialization
 mod.on_disabled = function(is_first_call)
-	remove_allrow_talents()
+	if not is_first_call then
+		remove_allrow_talents()
+	end
 end
 
 -- Called when the checkbox for this is checked
@@ -791,4 +746,5 @@ end
 --[[
 	Initialization
 --]]
+
 add_allrow_talents()

@@ -2,19 +2,6 @@ local mod = get_mod("PlrOutlineBtn")
 
 mod:dofile("scripts/settings/outline_settings")
 
--- These are my notes for finding my place
--- I'm trying to find a way to customize outline thickness
--- No luck yet :(
---
--- Note: plr outlines are called on line 364 of scripts/entity_system/systems/outlines/outline_system
--- self:outline_unit(unit, extension.flag, channel, true, extension.apply_method, extension.reapply)
--- 					 unit, "outline_unit", color, true, "unit_and_childs", varies
--- Mesh.set_shader_pass_flag(mesh, flag, do_outline)
---					mesh_name = Unit.get_data(unit, "outlined_meshes", i)
---	   	set_shader_pass_flag(Unit.mesh(unit, mesh_name), "outline_unit", true)
--- 
--- Check out line 472
-
 local toggled_active = false
 
 function mod.get_mode_and_range(on_or_off)
@@ -73,23 +60,6 @@ end
 
 function mod.change_outline_color(new_clr, clr_type)
 	OutlineSettings.colors[clr_type].color = new_clr
-end
-
-function mod.set_outline_width()
-	mod:echo("Trying to set widths...")
-	local players = Managers.player:players()
-	local dbg_amt = 0.5
-	for _, player in pairs(players) do
-		local player_unit = player.player_unit
-		
-		if not player.local_player and Unit.alive(player_unit) then
-			local chan = Color(255, mod:get("clr_kd_r"), mod:get("clr_kd_g"), mod:get("clr_kd_b"))
-			--local chan = Color(255, 0, 0, 0)
-			Unit.set_color_for_materials_in_unit_and_childs(player_unit, "outline_color", chan)
-			Unit.set_color_for_materials_in_unit_and_childs(player_unit, "outline_thickness", Color(100, 100, 100, 100))
-		end
-	end
-	mod:echo("Done!")
 end
 
 mod.on_setting_changed = function(setting_name)
