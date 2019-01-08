@@ -13,8 +13,6 @@ return {
 				tooltip = "toggle_outline_tool",
 				default_value = true
 			},
-		},
-		widgets = {
 			{
 				setting_id = "debuggo",
 				type = "keybind",
@@ -24,6 +22,8 @@ return {
 				function_name = "set_outline_width",
 				default_value = {}
 			},
+		},
+		widgets = {
 			{
 				setting_id = "gr_toggle",
 				type = "group",
