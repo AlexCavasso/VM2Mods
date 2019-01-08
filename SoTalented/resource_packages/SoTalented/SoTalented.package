@@ -1,0 +1,11 @@
+mod = [
+	"SoTalented"
+]
+
+package = [
+	"resource_packages/SoTalented/SoTalented"
+]
+
+lua = [
+	"scripts/mods/SoTalented/*"
+]
