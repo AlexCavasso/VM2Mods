@@ -6,7 +6,8 @@ return {
 	description = mod:localize("mod_description"),  -- Mod description
 	is_togglable = false,							-- If the mod can be enabled/disabled
 	options = {                             		-- Widget settings for the mod options menu
-		collapsed_widgets = {
+		widgets = {
+			--[[
 			{
 				setting_id = "outline_toggle",
 				type = "checkbox",
@@ -22,8 +23,7 @@ return {
 				function_name = "set_outline_width",
 				default_value = {}
 			},
-		},
-		widgets = {
+			--]]
 			{
 				setting_id = "gr_toggle",
 				type = "group",
