@@ -45,12 +45,6 @@ return {
 				type = "group",
 				sub_widgets = {
 					{
-						setting_id = "ker_ally_ammo_regen",
-						type = "checkbox",
-						tooltip = "ker_ally_ammo_tooltip",
-						default_value = false
-					},
-					{
 						setting_id = "ker_hp_cap",
 						type = "numeric",
 						tooltip = "ker_cap_tooltip",
@@ -62,9 +56,9 @@ return {
 						setting_id = "ker_hp_amt",
 						type = "numeric",
 						tooltip = "ker_amt_tooltip",
-						default_value = 4.5,
+						default_value = 4.0,
 						range = {0, 250},
-						decimals_number = 2
+						decimals_number = 1
 					},
 					{
 						setting_id = "ker_ammo_amt",
@@ -73,7 +67,27 @@ return {
 						default_value = 0.04,
 						range = {0, 1},
 						decimals_number = 2
-					}
+					},
+					{
+						setting_id = "ker_ally_ammo_regen",
+						type = "checkbox",
+						tooltip = "ker_ally_ammo_tooltip",
+						default_value = false
+					},
+					{
+						setting_id = "ker_cd_reduction",
+						type = "numeric",
+						tooltip = "ker_cdred_tooltip",
+						default_value = 0.05,
+						range = {0, 1},
+						decimals_number = 2
+					},
+					{
+						setting_id = "ker_ally_cd_reduction",
+						type = "checkbox",
+						tooltip = "ker_ally_cdred_tooltip",
+						default_value = false
+					},
 				}
 			}
 		}

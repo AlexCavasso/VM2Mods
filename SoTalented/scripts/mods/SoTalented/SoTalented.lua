@@ -34,21 +34,27 @@ local function add_allrow_talents()
 			description = "bardin_ironbreaker_sotalented",
 			name = "bardin_ironbreaker_sotalented",
 			num_ranks = 1,
-			icon = "bardin_ironbreaker_push_arc",
+			icon = "bardin_ironbreaker_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"bardin_ironbreaker_push_arc",
-				"bardin_ironbreaker_max_health",
-				"bardin_ironbreaker_max_stamina",
-				"bardin_ironbreaker_buff_defense_on_revived_target",
-				"bardin_ironbreaker_reduced_overcharge",
-				"bardin_ironbreaker_regen_stamina_on_charged_attacks",
-				"bardin_ironbreaker_stamina_regen_during_gromril",
-				"bardin_ironbreaker_gromril_armour_heal",
 				"bardin_ironbreaker_vanguard",
 				"bardin_ironbreaker_bloodlust",
-				"bardin_ironbreaker_conqueror"
+				"bardin_ironbreaker_conqueror",
+				"bardin_ironbreaker_power_on_nearby_allies",
+				"bardin_ironbreaker_increased_overcharge",
+				"bardin_ironbreaker_increased_ranged_power",
+				"bardin_ironbreaker_power_on_blocked_attacks_add",
+				"bardin_ironbreaker_power_on_blocked_attacks_remove_damage",
+				"bardin_ironbreaker_power_on_blocked_attacks_remove_stagger",
+				"bardin_ironbreaker_stamina_regen_during_gromril",
+				"bardin_ironbreaker_gromril_stagger",
+				"bardin_ironbreaker_regen_stamina_on_charged_attacks",
+				"bardin_ironbreaker_regen_stamina_on_block_broken",
+				"bardin_ironbreaker_cooldown_reduction_on_kill_while_full_stamina",
+				"tank_unbalance",
+				"smiter_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -57,20 +63,24 @@ local function add_allrow_talents()
 			description = "bardin_slayer_sotalented",
 			name = "bardin_slayer_sotalented",
 			num_ranks = 1,
-			icon = "bardin_slayer_max_health",
+			icon = "bardin_slayer_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"bardin_slayer_dodge_range",
-				"bardin_slayer_dodge_speed",
-				"bardin_slayer_max_health",
-				"bardin_slayer_crit_chance",
-				"bardin_slayer_movement_speed_on_last_standing",
-				"bardin_slayer_damage_taken_capped",
-				"bardin_slayer_debuff_defence_on_crit",
 				"bardin_slayer_reaper",
 				"bardin_slayer_bloodlust",
-				"bardin_slayer_conqueror"
+				"bardin_slayer_conqueror",
+				"bardin_slayer_crit_chance",
+				"bardin_slayer_power_on_double_two_handed_weapons",
+				"bardin_slayer_attack_speed_on_double_one_handed_weapons",
+				"bardin_slayer_damage_taken_capped",
+				"bardin_slayer_damage_reduction_on_melee_charge_action",
+				"bardin_slayer_push_on_dodge",
+				"bardin_slayer_activated_ability_leap_damage_add",
+				"bardin_slayer_activated_ability_leap_damage_remove",
+				"smiter_unbalance",
+				"linesman_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -79,21 +89,25 @@ local function add_allrow_talents()
 			description = "bardin_ranger_sotalented",
 			name = "bardin_ranger_sotalented",
 			num_ranks = 1,
-			icon = "bardin_slayer_max_health",
+			icon = "bardin_ranger_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"bardin_ranger_reduced_spread",
-				"bardin_ranger_healing_received",
-				"bardin_ranger_attack_speed",
-				"bardin_ranger_increased_melee_damage_on_no_ammo_add",
-				"bardin_ranger_increased_melee_damage_on_no_ammo_remove",
-				"bardin_ranger_movement_speed",
-				"bardin_ranger_increased_defence_on_disabled",
 				"bardin_ranger_vanguard",
 				"bardin_ranger_reaper",
 				"bardin_ranger_conqueror",
-				"bardin_ranger_activated_ability_cooldown"
+				"bardin_ranger_increased_melee_damage_on_no_ammo_add",
+				"bardin_ranger_increased_melee_damage_on_no_ammo_remove",
+				"bardin_ranger_cooldown_on_reload",
+				"bardin_ranger_attack_speed",
+				"bardin_ranger_passive_ammo_on_ally_pickup",
+				"bardin_ranger_movement_speed",
+				"bardin_ranger_reduced_damage_taken_headshot",
+				"bardin_ranger_reload_speed_on_multi_hit_add",
+				"bardin_ranger_ability_free_grenade_remove",
+				"tank_unbalance",
+				"linesman_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -114,23 +128,26 @@ local function add_allrow_talents()
 			description = "kerillian_shade_sotalented",
 			name = "kerillian_shade_sotalented",
 			num_ranks = 1,
-			icon = "kerillian_shade_stamina_regen",
+			icon = "kerillian_shade_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"kerillian_shade_dodge_range",
-				"kerillian_shade_dodge_speed",
-				"kerillian_shade_stamina_regen",
-				"kerillian_shade_attack_speed",
-				"kerillian_shade_movement_speed",
-				"kerillian_shade_debuff_defence_on_disabler",
-				"kerillian_shade_increased_damage_on_grimoire_picked_up",
-				"kerillian_shade_passive_improved",
-				"kerillian_shade_backstabs_replenishes_ammunition",
 				"kerillian_shade_regrowth",
 				"kerillian_shade_bloodlust",
 				"kerillian_shade_conqueror",
-				"kerillian_shade_activated_ability_cooldown"
+				"kerillian_shade_increased_damage_on_poisoned_or_bleeding_enemy",
+				"kerillian_shade_increased_critical_strike_damage",
+				"kerillian_shade_stacking_headshot_damage_on_headshot",
+				"kerillian_shade_passive_improved",
+				"kerillian_shade_passive_stealth_on_backstab_kill",
+				"kerillian_shade_backstabs_replenishes_ammunition",
+				"kerillian_shade_movement_speed",
+				"kerillian_shade_movement_speed_on_critical_hit",
+				"kerillian_shade_damage_reduction_on_critical_hit",
+				"kerillian_shade_activated_ability_quick_cooldown_buff",
+				"smiter_unbalance",
+				"finesse_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -139,25 +156,28 @@ local function add_allrow_talents()
 			description = "kerillian_maidenguard_sotalented",
 			name = "kerillian_maidenguard_sotalented",
 			num_ranks = 1,
-			icon = "kerillian_maidenguard_max_stamina",
+			icon = "kerillian_maidenguard_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"kerillian_maidenguard_max_stamina",
-				"kerillian_maidenguard_push_arc",
-				"kerillian_maidenguard_max_ammo",
-				"kerillian_maidenguard_remove_wounded_on_boss_death",
-				"kerillian_maidenguard_heavy_hits",
-				"kerillian_maidenguard_slower_hits",
-				"kerillian_maidenguard_damage_reduction_on_last_standing",
-				"kerillian_maidenguard_movement_speed",
-				"kerillian_maidenguard_improved_dodge",
-				"kerillian_maidenguard_improved_dodge_speed",
-				"kerillian_maidenguard_improved_stamina_regen",
 				"kerillian_maidenguard_reaper",
 				"kerillian_maidenguard_bloodlust",
 				"kerillian_maidenguard_conqueror",
-				"kerillian_maidenguard_activated_ability_cooldown"
+				"kerillian_maidenguard_power_level_on_unharmed",
+				"kerillian_maidenguard_crit_chance",
+				"kerillian_maidenguard_cooldown_on_nearby_allies",
+				"kerillian_maidenguard_passive_attack_speed_on_dodge",
+				"kerillian_maidenguard_improved_dodge",
+				"kerillian_maidenguard_improved_dodge_speed",
+				"kerillian_maidenguard_passive_noclip_dodge_start",
+				"kerillian_maidenguard_passive_noclip_dodge_end",
+				"kerillian_maidenguard_max_ammo",
+				"kerillian_maidenguard_max_health",
+				"kerillian_maidenguard_block_cost",
+				"kerillian_maidenguard_activated_ability_buff_on_enemy_hit",
+				"smiter_unbalance",
+				"linesman_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -166,20 +186,24 @@ local function add_allrow_talents()
 			description = "kerillian_waywatcher_sotalented",
 			name = "kerillian_waywatcher_sotalented",
 			num_ranks = 1,
-			icon = "kerillian_waywatcher_attack_speed",
+			icon = "kerillian_waywatcher_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"kerillian_waywatcher_crit_chance",
-				"kerillian_waywatcher_stamina_regen",
-				"kerillian_waywatcher_attack_speed",
-				"kerillian_waywatcher_gain_ammo_on_boss_death",
-				"kerillian_waywatcher_increased_crit_hit_damage_on_high_health",
-				"kerillian_waywatcher_headshot_multiplier",
 				"kerillian_waywatcher_regrowth",
 				"kerillian_waywatcher_reaper",
 				"kerillian_waywatcher_conqueror",
-				"kerillian_waywatcher_activated_ability_cooldown"
+				"kerillian_waywatcher_extra_arrow_melee_kill",
+				"kerillian_waywatcher_critical_bleed",
+				"kerillian_waywatcher_attack_speed_on_ranged_headshot",
+				"kerillian_waywatcher_movement_speed_on_special_kill",
+				"kerillian_waywatcher_activated_ability_cooldown",
+				"kerillian_waywatcher_projectile_ricochet",
+				"kerillian_waywatcher_activated_ability_restore_ammo_on_career_skill_special_kill",
+				"kerillian_waywatcher_activated_ability_piercing_shot",
+				"linesman_unbalance",
+				"finesse_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -200,22 +224,26 @@ local function add_allrow_talents()
 			description = "markus_huntsman_sotalented",
 			name = "markus_huntsman_sotalented",
 			num_ranks = 1,
-			icon = "markus_huntsman_reload_speed",
+			icon = "markus_huntsman_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"markus_huntsman_reduced_spread",
-				"markus_huntsman_reload_speed",
-				"markus_huntsman_max_stamina",
-				"markus_huntsman_gain_ammo_on_boss_death",
-				"markus_huntsman_debuff_defence_on_crit",
-				"markus_huntsman_debuff_defence_on_disabler",
-				"markus_huntsman_headshots_increase_reload_speed",
 				"markus_huntsman_vanguard",
 				"markus_huntsman_bloodlust",
 				"markus_huntsman_conqueror",
+				"markus_huntsman_increased_damage_to_wounded_enemies",
+				"markus_huntsman_debuff_defence_on_crit",
+				"markus_huntsman_headshot_damage",
+				"markus_huntsman_headshots_increase_reload_speed",
+				"markus_huntsman_passive_temp_health_on_headshot",
+				"markus_huntsman_movement_speed",
+				"markus_huntsman_damage_reduction_on_monster_kill",
+				"markus_huntsman_damage_reduction_on_monster_kill_passive",
+				"markus_huntsman_ammo_on_special_kill",
 				"markus_huntsman_activated_ability_cooldown",
-				"markus_huntsman_activated_ability_regen"
+				"tank_unbalance",
+				"smiter_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -224,23 +252,29 @@ local function add_allrow_talents()
 			description = "markus_knight_sotalented",
 			name = "markus_knight_sotalented",
 			num_ranks = 1,
-			icon = "markus_knight_push_arc",
+			icon = "markus_knight_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"markus_knight_push_arc",
-				"markus_knight_max_health",
-				"markus_knight_attack_speed",
-				"markus_knight_buff_defense_on_revived_target",
-				"markus_knight_uninterruptible_on_block_broken",
-				"markus_knight_regen_stamina_on_charged_attacks",
-				"markus_knight_passive_stamina_aura",
-				"markus_knight_passive_movement_speed_aura",
-				"markus_knight_improved_passive_defence_aura",
 				"markus_knight_reaper",
 				"markus_knight_vanguard",
 				"markus_knight_conqueror",
-				"markus_knight_activated_ability_cooldown"
+				"markus_knight_power_level_impact",
+				"markus_knight_power_level_on_stagger_elite",
+				"markus_knight_attack_speed_on_push",
+				"markus_knight_improved_passive_defence_aura",
+				"markus_knight_passive_block_cost_aura",
+				"markus_knight_passive_power_increase_buff",
+				"markus_knight_movement_speed_on_incapacitated_allies",
+				"markus_knight_free_pushes_on_block",
+				"markus_knight_damage_taken_ally_proximity",
+				"markus_knight_ability_hit_target_damage_taken_blast",
+				"markus_knight_ability_hit_target_damage_taken_charge",
+				"markus_knight_ability_attack_speed_enemy_hit_blast",
+				"markus_knight_ability_attack_speed_enemy_hit_charge",
+				"tank_unbalance",
+				"linesman_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -249,29 +283,29 @@ local function add_allrow_talents()
 			description = "markus_mercenary_sotalented",
 			name = "markus_mercenary_sotalented",
 			num_ranks = 1,
-			icon = "markus_mercenary_stamina_regen",
+			icon = "markus_mercenary_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"markus_mercenary_healing_received",
-				"markus_mercenary_stamina_regen",
-				"markus_mercenary_crit_chance",
-				"markus_mercenary_increased_damage_on_enemy_proximity",
-				"markus_mercenary_increased_defence_on_low_health",
-				"markus_mercenary_reduced_stun_duration",
-				"markus_mercenary_passive_defence_on_proc",
-				"markus_mercenary_passive_power_level_on_proc",
 				"markus_mercenary_reaper",
 				"markus_mercenary_bloodlust",
 				"markus_mercenary_conqueror",
-				"markus_mercenary_activated_ability_cooldown"
+				"markus_mercenary_increased_damage_on_enemy_proximity",
+				"markus_mercenary_power_level_cleave",
+				"markus_mercenary_crit_count",
+				"markus_mercenary_dodge_range",
+				"markus_mercenary_dodge_speed",
+				"markus_mercenary_max_ammo",
+				"markus_mercenary_activated_ability_cooldown_no_heal",
+				"linesman_unbalance",
+				"smiter_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
 	table.insert(TalentTrees.empire_soldier[1][5], "markus_huntsman_sotalented")
 	table.insert(TalentTrees.empire_soldier[2][5], "markus_knight_sotalented")
 	table.insert(TalentTrees.empire_soldier[3][5], "markus_mercenary_sotalented")
-	
 	
 	--[[
 		dP   dP   dP oo                                                    dP 
@@ -286,23 +320,26 @@ local function add_allrow_talents()
 			description = "sienna_scholar_sotalented",
 			name = "sienna_scholar_sotalented",
 			num_ranks = 1,
-			icon = "sienna_scholar_reduced_spread",
+			icon = "sienna_scholar_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"sienna_scholar_reduced_overcharge",
-				"sienna_scholar_increased_attack_speed",
-				"sienna_scholar_reduced_spread",
-				"sienna_scholar_overcharge_regen_on_grimoire_pickup",
-				"sienna_scholar_increased_ranged_charge_speed_on_low_health",
-				"sienna_scholar_increased_defence_on_disabled",
-				"sienna_scholar_passive_reduced_block_cost_from_overcharge",
-				"sienna_scholar_passive_reduced_overcharge_from_overcharge",
-				"sienna_scholar_passive_increased_attack_speed_from_overcharge",
 				"sienna_scholar_reaper",
 				"sienna_scholar_bloodlust",
 				"sienna_scholar_conqueror",
-				"sienna_scholar_activated_ability_cooldown"
+				"sienna_scholar_increased_attack_speed",
+				"sienna_scholar_crit_chance_above_health_threshold",
+				"sienna_scholar_ranged_power_ascending_descending",
+				"sienna_scholar_passive_increased_attack_speed_from_overcharge",
+				"sienna_scholar_passive_increased_power_level_on_high_overcharge",
+				"sienna_scholar_passive_overcharge_pause_on_special_kill",
+				"sienna_scholar_damage_taken_on_elite_or_special_kill",
+				"sienna_scholar_overcharge_no_slow",
+				"sienna_scholar_move_speed_on_critical_hit",
+				"sienna_scholar_activated_ability_crit_refresh_cooldown",
+				"smiter_unbalance",
+				"linesman_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -311,22 +348,24 @@ local function add_allrow_talents()
 			description = "sienna_adept_sotalented",
 			name = "sienna_adept_sotalented",
 			num_ranks = 1,
-			icon = "sienna_adept_healing_received",
+			icon = "sienna_adept_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"sienna_adept_healing_received",
-				"sienna_adept_max_stamina",
-				"sienna_adept_charge_speed_increase",
-				"sienna_adept_increased_damage_on_enemy_proximity",
-				"sienna_adept_increased_defence_on_last_standing",
-				"sienna_adept_passive_decreased_block_cost",
-				"sienna_adept_passive_charge_speed_increased",
-				"sienna_adept_passive_improved",
 				"sienna_adept_vanguard",
 				"sienna_adept_bloodlust",
 				"sienna_adept_conqueror",
-				"sienna_adept_activated_ability_cooldown"
+				"sienna_adept_power_level_on_full_charge",
+				"sienna_adept_attack_speed_on_enemies_hit",
+				"sienna_adept_passive_charge_speed_increased",
+				"sienna_adept_passive_improved",
+				"sienna_adept_damage_reduction_on_ignited_enemy",
+				"sienna_adept_cooldown_reduction_on_burning_enemy_killed",
+				"sienna_adept_increased_burn_damage",
+				"sienna_adept_reduced_non_burn_damage",
+				"tank_unbalance",
+				"smiter_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -335,24 +374,25 @@ local function add_allrow_talents()
 			description = "sienna_unchained_sotalented",
 			name = "sienna_unchained_sotalented",
 			num_ranks = 1,
-			icon = "sienna_unchained_push_arc",
+			icon = "sienna_unchained_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"sienna_unchained_push_arc",
-				"sienna_unchained_max_health",
-				"sienna_unchained_max_overcharge",
-				"sienna_unchained_buff_defense_on_revived_target",
-				"sienna_unchained_regen_stamina_on_charged_attacks",
-				"sienna_unchained_remove_wounded_on_boss_death",
-				"sienna_unchained_passive_overcharged_blocks",
-				"sienna_unchained_increased_vent_speed",
-				"sienna_unchained_reduced_vent_damage",
-				"sienna_unchained_reduced_overcharge",
 				"sienna_unchained_vanguard",
 				"sienna_unchained_reaper",
 				"sienna_unchained_conqueror",
-				"sienna_unchained_activated_ability_cooldown"
+				"sienna_unchained_attack_speed_on_high_overcharge",
+				"sienna_unchained_burn_push",
+				"sienna_unchained_passive_overcharged_blocks",
+				"sienna_unchained_increased_vent_speed",
+				"sienna_unchained_reduced_vent_damage",
+				"sienna_unchained_reduced_damage_taken_after_venting",
+				"sienna_unchained_vent_overheat_on_low_health_cooldown",
+				"sienna_unchained_reduced_overcharge",
+				"sienna_unchained_activated_ability_power_on_enemies_hit",
+				"tank_unbalance",
+				"linesman_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -373,24 +413,25 @@ local function add_allrow_talents()
 			description = "victor_zealot_sotalented",
 			name = "victor_zealot_sotalented",
 			num_ranks = 1,
-			icon = "victor_zealot_stamina_regen",
+			icon = "victor_zealot_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"victor_zealot_stun_reduction",
-				"victor_zealot_stamina_regen",
-				"victor_zealot_crit_chance",
-				"victor_zealot_increased_damage_on_enemy_proximity",
-				"victor_zealot_damage_taken_capped",
-				"victor_zealot_increased_defence_low_health",
-				"victor_zealot_increased_block_arc_from_passive",
-				"victor_zealot_increased_critical_hit_damage_from_passive",
-				"victor_zealot_increased_stamina_from_passive",
 				"victor_zealot_reaper",
 				"victor_zealot_bloodlust",
 				"victor_zealot_conqueror",
-				"victor_zealot_activated_ability_cooldown",
-				"victor_zealot_activated_ability_heal"
+				"victor_zealot_crit_count",
+				"victor_zealot_power",
+				"victor_zealot_attack_speed_on_health_percent",
+				"victor_zealot_passive_move_speed",
+				"victor_zealot_passive_healing_received",
+				"victor_zealot_passive_damage_taken",
+				"victor_zealot_move_speed_on_damage_taken",
+				"victor_zealot_max_stamina_on_damage_taken",
+				"victor_zealot_reduced_damage_taken_buff",
+				"smiter_unbalance",
+				"linesman_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -399,23 +440,28 @@ local function add_allrow_talents()
 			description = "victor_bountyhunter_sotalented",
 			name = "victor_bountyhunter_sotalented",
 			num_ranks = 1,
-			icon = "victor_bountyhunter_reload_speed",
+			icon = "victor_bountyhunter_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"victor_bountyhunter_reduced_spread",
-				"victor_bountyhunter_reload_speed",
-				"victor_bountyhunter_increased_attack_speed",
-				"victor_bountyhunter_revive_speed",
-				"victor_bountyhunter_increased_melee_damage_on_no_ammo_add",
-				"victor_bountyhunter_increased_melee_damage_on_no_ammo_remove",
-				"victor_bountyhunter_critical_hit_damage",
-				"victor_bountyhunter_activate_passive_on_melee_kill",
-				"victor_bountyhunter_passive_infinite_ammo",
 				"victor_bountyhunter_regrowth",
 				"victor_bountyhunter_bloodlust",
 				"victor_bountyhunter_conqueror",
-				"victor_bountyhunter_activated_ability_cooldown"
+				"victor_bountyhunter_increased_melee_damage_on_no_ammo_add",
+				"victor_bountyhunter_increased_melee_damage_on_no_ammo_remove",
+				"victor_bountyhunter_debuff_defence_on_crit",
+				"victor_bountyhunter_power_level_on_clip_size",
+				"victor_bountyhunter_activate_passive_on_melee_kill",
+				"victor_bountyhunter_passive_infinite_ammo",
+				"victor_bountyhunter_movespeed_on_ranged_crit",
+				"victor_bountyhunter_restore_ammo_on_elite_kill",
+				"victor_bountyhunter_stacking_damage_reduction_on_elite_or_special_kill",
+				"victor_bountyhunter_activated_ability_railgun",
+				"victor_bountyhunter_activated_ability_shotgun",
+				"victor_bountyhunter_activated_ability_passive_cooldown_reduction",
+				"smiter_unbalance",
+				"finesse_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -424,24 +470,26 @@ local function add_allrow_talents()
 			description = "victor_witchhunter_sotalented",
 			name = "victor_witchhunter_sotalented",
 			num_ranks = 1,
-			icon = "victor_witchhunter_dodge_range",
+			icon = "victor_witchhunter_regrowth",
 			description_values = {},
 			requirements = {},
 			buffs = {
-				"victor_witchhunter_dodge_range",
-				"victor_witchhunter_dodge_speed",
-				"victor_witchhunter_max_stamina",
-				"victor_witchhunter_max_ammo",
-				"victor_witchhunter_increased_damage_on_grimoire_picked_up",
-				"victor_witchhunter_headshot_damage_increase",
-				"victor_witchhunter_damage_reduction_on_disabled",
-				"victor_witchhunter_attack_speed_on_ping_target_killed",
-				"victor_witchhunter_heal_party_on_ping_target_killed",
-				"victor_witchhunter_critical_hit_chance_on_ping_target_killed",
 				"victor_witchhunter_regrowth",
 				"victor_witchhunter_reaper",
 				"victor_witchhunter_conqueror",
-				"victor_witchhunter_activated_ability_cooldown"
+				"victor_witchhunter_headshot_damage_increase",
+				"victor_witchhunter_bleed_on_critical_hit",
+				"victor_witchhunter_guaranteed_crit_on_timed_block_add",
+				"victor_witchhunter_critical_hit_chance_on_ping_target_killed",
+				"victor_witchhunter_attack_speed_on_enemy_pinged",
+				"victor_witchhunter_max_ammo",
+				"victor_witchhunter_stamina_regen_on_push",
+				"victor_witchhunter_dodge_range",
+				"victor_witchhunter_dodge_speed",
+				"victor_witchhunter_activated_ability_refund_cooldown_on_enemies_hit",
+				"linesman_unbalance",
+				"finesse_unbalance",
+				"power_level_unbalance"
 			},
 			buff_data = {}
 		})
@@ -526,7 +574,8 @@ end)
 mod:hook(TalentExtension, "has_talent", function (func, self, talent_name)
 	local has = func(self, talent_name) -- Run it, just in case other mods are hooked to it
 	if talent_name == "victor_bountyhunter_activated_ability_shotgun" or
-	   talent_name == "victor_bountyhunter_activated_ability_railgun" then
+	   talent_name == "victor_bountyhunter_activated_ability_railgun" or
+	   talent_name == "kerillian_waywatcher_activated_ability_piercing_shot" then
 		return has
 	else
 		return true
@@ -648,6 +697,8 @@ mod:hook_origin(BuffFunctionTemplates.functions, "update_kerillian_waywatcher_re
 		local allied_ammo_regen = mod:get("ker_ally_ammo_regen")
 		local weapon_slot = "slot_ranged"
 		local ammo_bonus_fraction = mod:get("ker_ammo_amt")
+		local allied_cd_reduct = mod:get("ker_ally_cd_reduction")
+		local cd_reduct_amount = mod:get("ker_cd_reduction")
 		
 		if not allied_ammo_regen then
 			local inventory_extension = ScriptUnit.extension(unit, "inventory_system")
@@ -666,6 +717,12 @@ mod:hook_origin(BuffFunctionTemplates.functions, "update_kerillian_waywatcher_re
 					ammo_extension:add_ammo_to_reserve(ammo_amount)
 				end
 			end
+		end
+		
+		if not allied_cd_reduct then
+			local career_extension = ScriptUnit.extension(unit, "career_system")
+			
+			career_extension:reduce_activated_ability_cooldown_percent(cd_reduct_amount)
 		end
 
 		if Managers.state.network.is_server then
@@ -686,6 +743,7 @@ mod:hook_origin(BuffFunctionTemplates.functions, "update_kerillian_waywatcher_re
 							if health_extension:current_permanent_health_percent() <= regen_cap then
 								DamageUtils.heal_network(player_and_bot_units[i], unit, heal_amount, "career_passive")
 							end
+							
 							if allied_ammo_regen then
 								local inventory_extension = ScriptUnit.extension(player_and_bot_units[i], "inventory_system")
 								local slot_data = inventory_extension:get_slot_data(weapon_slot)
@@ -703,6 +761,12 @@ mod:hook_origin(BuffFunctionTemplates.functions, "update_kerillian_waywatcher_re
 										ammo_extension:add_ammo_to_reserve(ammo_amount)
 									end
 								end
+							end
+							
+							if allied_cd_reduct then
+								local career_extension = ScriptUnit.extension(player_and_bot_units[i], "career_system")
+								
+								career_extension:reduce_activated_ability_cooldown_percent(cd_reduct_amount)
 							end
 						end
 					end

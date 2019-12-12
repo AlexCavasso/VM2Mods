@@ -45,7 +45,7 @@ return {
 		en = "Healing Amount"
 	},
 	ker_amt_tooltip = {
-		en = "The amount of health restored by the Waystalker passive (default 4.5)."
+		en = "The amount of health restored by the Waystalker passive (default 4.0)."
 	},
 	ker_ammo_amt = {
 		en = "Ammo Regen Amount"
@@ -58,6 +58,18 @@ return {
 	},
 	ker_ally_ammo_tooltip = {
 		en = "When checked, allies also benefit from the ammo regen of the Waystalker passive (default OFF)."
+	},
+	ker_ally_cd_reduction = {
+		en = "Allies Cooldown Reduced"
+	},
+	ker_ally_cdred_tooltip = {
+		en = "When checked, allies also benefit from the cooldown reduction of the Waystalker passive (default OFF)."
+	},
+	ker_cd_reduction = {
+		en = "Cooldown Reduction Amount"
+	},
+	ker_cdred_tooltip = {
+		en = "The percentage of the cooldown reduction provided by the Waystalker passive (default 0.05)."
 	},
 --[[
 	some_other_text_id = {
